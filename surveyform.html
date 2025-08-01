@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1 id="title">Community Feedback Survey</h1>
+
+  <p id="description">We value your opinion! Please take a moment to complete this survey and help us improve.</p>
+
+  <form id="survey-form">
+
+    <!-- NAME -->
+    <label id="name-label" for="name">Name:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Enter your full name" 
+      required
+    >
+
+    <!-- EMAIL -->
+    <label id="email-label" for="email">Email:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Enter your email address" 
+      required
+    >
+
+    <!-- NUMBER -->
+    <label id="number-label" for="number">Age (optional):</label>
+    <input 
+      type="number" 
+      id="number" 
+      name="age" 
+      placeholder="Enter your age" 
+      min="10" 
+      max="120"
+    >
+
+    <!-- DROPDOWN -->
+    <label for="dropdown">Which option best describes you?</label>
+    <select id="dropdown" name="role">
+      <option value="">--Please choose an option--</option>
+      <option value="student">Student</option>
+      <option value="professional">Professional</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- RADIO BUTTONS -->
+    <p>Would you recommend our service?</p>
+    <label>
+      <input type="radio" name="recommend" value="yes"> Yes
+    </label>
+    <label>
+      <input type="radio" name="recommend" value="no"> No
+    </label>
+
+    <!-- CHECKBOXES -->
+    <p>What topics are you interested in? (Check all that apply)</p>
+    <label>
+      <input type="checkbox" name="interest" value="web-dev"> Web Development
+    </label>
+    <label>
+      <input type="checkbox" name="interest" value="data-science"> Data Science
+    </label>
+    <label>
+      <input type="checkbox" name="interest" value="ai"> Artificial Intelligence
+    </label>
+
+    <!-- TEXTAREA -->
+    <label for="comments">Any additional comments or suggestions?</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Write your message here..."></textarea>
+
+    <!-- SUBMIT BUTTON -->
+    <button type="submit" id="submit">Submit</button>
+  </form>
+
+</body>
+</html>
